@@ -1,16 +1,21 @@
 'use client'
-import { OrbitControls } from '@react-three/drei';
+import { Html, OrbitControls } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import React from 'react'
 import PointsGeometry from './PointsGeometry';
 import { Bloom, EffectComposer } from '@react-three/postprocessing';
+import { useStore } from './lib/useStore';
 
 const NewScene = () => {
+  const whichComponent = useStore(state => state.whichComponent);
+
+
   return (
     <Canvas camera={{position: [0,-2.7,14], fov: 75}}>
         <ambientLight intensity={0.5} color={'white'} />
         <color attach={"background"} args={['#000']} />
-        <PointsGeometry />
+        {whichComponent === 'component 1' &&  <PointsGeometry />}
+       
         <EffectComposer>
           <Bloom
             intensity={50}

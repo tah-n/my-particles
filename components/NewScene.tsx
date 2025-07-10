@@ -19,7 +19,7 @@ const NewScene = () => {
             mipmapblur
           />
         </EffectComposer>
-        <OrbitControls />
+        {/* <OrbitControls /> */}
     </Canvas>
   )
 }

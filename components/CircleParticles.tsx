@@ -9,7 +9,7 @@ type ParticleData = {
     radius: number;
 }
 
-const count = 1000;
+const count = 700;
 const rInner = 5;
 const rOuter = 6.4;
 

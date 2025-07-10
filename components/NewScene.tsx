@@ -7,7 +7,7 @@ import { Bloom, EffectComposer } from '@react-three/postprocessing';
 
 const NewScene = () => {
   return (
-    <Canvas camera={{position: [0,0,16], fov: 75}}>
+    <Canvas camera={{position: [0,-2.7,14], fov: 75}}>
         <ambientLight intensity={0.5} color={'white'} />
         <color attach={"background"} args={['#000']} />
         <PointsGeometry />

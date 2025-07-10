@@ -1,6 +1,6 @@
 'use client'
 import { useFrame } from '@react-three/fiber';
-import React, { useMemo, useRef } from 'react'
+import React, { useEffect, useMemo, useRef } from 'react'
 import * as THREE from 'three';
 
 const count = 2000;
@@ -31,7 +31,7 @@ const PointsGeometry = () => {
         if (dLeft > radius && dRight > radius) {
           positions.set([x, y, 0], i * 3);
           startPositions.current[i] = [x, y]; // نگهداری برای مسیر Bézier
-          velocity[i] = 0.001 + Math.random() * 0.08; // سرعت تصادفی
+          velocity[i] = 0.001 + Math.random() * 0.07; // سرعت تصادفی
           i++;
         }
       }
@@ -79,20 +79,26 @@ useFrame((state, delta) => {
 
 });
 
+
+useEffect(() => {
+  if(points.current) {
+    console.log(points.current)
+    points.current.rotation.x = 180.9;
+    points.current.rotation.y = -10;
+  }  
+},[])
   
   return (
     <points ref={points}>
       <bufferGeometry ref={geometryRef}>
         <bufferAttribute
           attach="attributes-position"
-          count={count}
-          array={particlesPosition.positions}
-          itemSize={3}
+          args={[particlesPosition.positions, 3]}
         />
       </bufferGeometry>
       <pointsMaterial 
         color="#5786F5" 
-        size={0.025} 
+        size={0.005} 
         sizeAttenuation
         transparent
         opacity={0.9}

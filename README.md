@@ -15,4 +15,4 @@ npm install three @react-three/fiber @react-three/drei @react-three/postprocessi
 
 ## Live Demo
 
-[Click Here](https://686fe41377d5ad05209a8d6f--tubular-malasada-1d8aee.netlify.app/)
+[Click Here](https://starlit-sunshine-6234a3.netlify.app/)

@@ -18,7 +18,7 @@ const Navbar = () => {
       <div className='relative w-full h-full'>
         <NavItems text='component 1' />
         <NavItems text='component 2' />
-        <div className='absolute w-[2rem] h-[3.5rem] -left-14 bg-white -top-4 rounded-lg cursor-pointer' onMouseEnter={handleEnter} />
+        <div className='absolute w-[2rem] h-[3.5rem] -left-14 bg-white -top-4 rounded-lg cursor-pointer' onMouseEnter={handleEnter} onClick={handleEnter} />
       </div>
     </div>
   )

@@ -12,7 +12,7 @@ const NewScene = () => {
 
 
   return (
-    <Canvas camera={{position: [0,-2.7,14], fov: 75}}>
+    <Canvas camera={{position: [0,-2.9,14], fov: 75}}>
         <ambientLight intensity={0.5} color={'white'} />
         <color attach={"background"} args={['#000']} />
         {(whichComponent === 'component 1' || whichComponent === '') && (

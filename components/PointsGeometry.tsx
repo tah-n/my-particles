@@ -82,7 +82,6 @@ useFrame((state, delta) => {
 
 useEffect(() => {
   if(points.current) {
-    console.log(points.current)
     points.current.rotation.x = 180.9;
     points.current.rotation.y = -10;
   }  
